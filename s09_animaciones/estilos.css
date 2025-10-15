@@ -1,0 +1,170 @@
+/* CONFIGURACION GENERAL ========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ENCABEZADO ========================== */
+header {
+  text-align: center;
+  background-color: #1f4e79;
+  color: white;
+  padding: 2rem 1rem;
+  animation: fadeIn 1.2s ease-in;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  opacity: 0.7;
+}
+
+/* CONTENEDOR DE TARJETAS ========================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* TARJETA ========================== */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+  animation: slideUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGEN DE TARJETA ========================== */
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #1f4e79;
+}
+
+/* TEXTO DE TARJETA ========================== */
+.card h2 {
+  color: #1f4e79;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* BARRA DE PROGRESO ========================== */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #1f4e79;
+  border-radius: 10px;
+  animation: growProgress 2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.progress::after {
+  content: "";
+  display: block;
+  width: var(--level);
+}
+
+/* BOTON DE TARJETA ========================== */
+button {
+  background-color: #1f4e79;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #2a6fb0;
+  transform: translateY(-2px);
+}
+
+/* FOOTER ========================== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ANIMACIONES========================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes growProgress {
+  from { width: 0; }
+  to { width: var(--level); }
+}
+
+/* RESPONSIVE========================== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  button {
+    width: 100%;
+  }
+}
