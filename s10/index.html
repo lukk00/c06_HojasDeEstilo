@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ew">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenStay - Reservas Activas</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="panel">
+        <header>
+            <div class="brand">
+                <div class="logo">GS</div>
+                <div>
+                    <h1>GreenStay Hotels — Reservas activas</h1>
+                    <div class="subtitle">Panel interno | Equipo administrativo</div>
+                </div>
+            </div>
+
+            <div class="muted">Mostrando <strong>4</strong> reservas</div>
+        </header>
+
+        <main>
+            <section class="reservations-grid" aria-label="Reservas activas">
+                <!-- Card 1 -->
+                <article class="card" style="--delay: 0ms;">
+                    <div class="card-head">
+                        <div class="guest">
+                            <div class="avatar">AL</div>
+                            <div>
+                                <div class="name">Alejandro Luna</div>
+                                <div class="room">Suite Ejecutiva | Hab. 502</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="status status--confirmed" title="Confirmada">Confirmada</span>
+                        </div>
+                    </div>
+
+                    <div class="dates" aria-hidden="false">
+                        <div class="date-pill">
+                            Entrada<br><small class="muted">2025-11-03</small>
+                        </div>
+                        <div class="date-pill">
+                            Salida<br><small class="muted">2025-11-06</small>
+                        </div>
+                        <div class="date-pill">
+                            3 noches
+                        </div>
+                    </div>
+
+                    <div class="meta-row">
+                        <div class="meta">Contacto: +51 987 654 321</div>
+                        <div class="meta">Pagó: Depósito</div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="muted">Reservado el 2025-10-15</div>
+                        <button class="btn">Ver detalles</button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card" style="--delay: 80ms;">
+                    <div class="card-head">
+                        <div class="guest">
+                            <div class="avatar">MC</div>
+                            <div>
+                                <div class="name">María Cruz</div>
+                                <div class="room">Habitación Doble | Hab. 311</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="status status--pending" title="Pendiente">Pendiente</span>
+                        </div>
+                    </div>
+
+                    <div class="dates">
+                        <div class="date-pill">
+                            Entrada<br><small class="muted">2025-11-10</small>
+                        </div>
+                        <div class="date-pill">
+                            Salida<br><small class="muted">2025-11-12</small>
+                        </div>
+                        <div class="date-pill">
+                            2 noches
+                        </div>
+                    </div>
+
+                    <div class="meta-row">
+                        <div class="meta">Contacto: +51 912 345 678</div>
+                        <div class="meta">Pago: Pendiente</div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="muted">Reservado el 2025-10-18</div>
+                        <button class="btn">Ver detalles</button>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card" style="--delay: 160ms;">
+                    <div class="card-head">
+                        <div class="guest">
+                            <div class="avatar">JP</div>
+                            <div>
+                                <div class="name">Juan Pérez</div>
+                                <div class="room">Suite Familiar | Hab. 120</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="status status--cancelled" title="Cancelada">Cancelada</span>
+                        </div>
+                    </div>
+
+                    <div class="dates">
+                        <div class="date-pill">
+                            Entrada<br><small class="muted">2025-10-28</small>
+                        </div>
+                        <div class="date-pill">
+                            Salida<br><small class="muted">2025-10-30</small>
+                        </div>
+                        <div class="date-pill">
+                            2 noches
+                        </div>
+                    </div>
+
+                    <div class="meta-row">
+                        <div class="meta">Contacto: +51 900 111 222</div>
+                        <div class="meta">Reembolso: Solicitado</div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="muted">Reservado el 2025-09-30</div>
+                        <button class="btn">Ver detalles</button>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card" style="--delay: 240ms;">
+                    <div class="card-head">
+                        <div class="guest">
+                            <div class="avatar">SL</div>
+                            <div>
+                                <div class="name">Sofía López</div>
+                                <div class="room">Habitación Individual • Hab. 208</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="status status--confirmed" title="Confirmada">Confirmada</span>
+                        </div>
+                    </div>
+
+                    <div class="dates">
+                        <div class="date-pill">
+                            Entrada<br><small class="muted">2025-11-01</small>
+                        </div>
+                        <div class="date-pill">
+                            Salida<br><small class="muted">2025-11-03</small>
+                        </div>
+                        <div class="date-pill">
+                            2 noches
+                        </div>
+                    </div>
+
+                    <div class="meta-row">
+                        <div class="meta">Contacto: +51 912 000 333</div>
+                        <div class="meta">Pagó: Tarjeta</div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="muted">Reservado el 2025-10-19</div>
+                        <button class="btn">Ver detalles</button>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
