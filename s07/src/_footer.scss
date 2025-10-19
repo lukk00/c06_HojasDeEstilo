@@ -1,0 +1,44 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use "sass:color";
+
+
+.site-footer {
+  background-color: v.$primary-color;
+  color: white;
+  padding: 20px 0;
+
+  .container {
+    @include m.container;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+
+    .social-links {
+      margin-top: 10px;
+
+      a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+          color: color.adjust(white, $lightness: 20%);
+        }
+      }
+    }
+  }
+
+  @include m.responsive(phone) {
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}

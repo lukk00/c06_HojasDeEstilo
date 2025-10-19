@@ -1,0 +1,61 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use "sass:color";
+
+.contact-section {
+  padding: 60px 0;
+  background-color: v.$secondary-color;
+
+  .container {
+    @include m.container;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: v.$primary-color;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: v.$font-main;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: v.$primary-color;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: color.adjust(v.$primary-color, $lightness: -10%);
+      }
+    }
+  }
+
+  @include m.responsive(phone) {
+    .contact-form {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+}

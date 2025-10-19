@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.about-section {
+  padding: 60px 0;
+  background-color: v.$secondary-color;
+
+  .container {
+    @include m.container;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .about-text {
+      flex: 1;
+
+      h2 {
+        color: v.$primary-color;
+      }
+
+      p {
+        color: v.$text-color;
+      }
+    }
+
+    .about-img {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+
+    @include m.responsive(phone) {
+      flex-direction: column;
+      text-align: center;
+
+      .about-img {
+        margin-top: 20px;
+      }
+    }
+  }
+}

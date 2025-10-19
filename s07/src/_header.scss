@@ -1,0 +1,50 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.site-header {
+  background: v.$primary-color;
+  padding: 20px 0;
+  color: white;
+
+  .container {
+    @include m.container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      height: 50px;
+    }
+
+    .main-nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+
+        li {
+          a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+              color: v.$secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive para móvil
+  @include m.responsive(phone) {
+    .main-nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+

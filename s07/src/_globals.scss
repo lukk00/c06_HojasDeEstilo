@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use "sass:color";
+
+
+body {
+  font-family: v.$font-main;
+  font-size: v.$font-size-base;
+  color: v.$text-color;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+h2 {
+  color: v.$primary-color;
+}
+
+.container {
+  @include m.container;
+}
+
+button {
+  background-color: v.$primary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: color.adjust(v.$primary-color, $lightness: -10%);
+  }
+}
+
+.card {
+  background-color: v.$secondary-color;
+  padding: 20px;
+  border-radius: 8px;
+  @extend %card-style;
+}
+
+%card-style {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
