@@ -1,0 +1,34 @@
+Justificación Técnica de la Compatibilidad
+
+El desarrollo del sitio web de NovaTech Perú SAC ha sido realizado siguiendo buenas prácticas de compatibilidad 
+para garantizar su correcto funcionamiento en los navegadores más utilizados (Google Chrome, Mozilla Firefox, 
+Microsoft Edge y Safari), así como una experiencia responsiva adecuada en dispositivos móviles, tabletas y escritorios.
+
+Uso de Propiedades CSS Modernas con Fallbacks
+Se emplearon CSS Grid y Flexbox para el layout, tecnologías modernas que permiten un diseño flexible. 
+Para garantizar compatibilidad con navegadores más antiguos, se implementaron fallbacks utilizando la 
+regla @supports. Esto asegura que el diseño no se rompa si el navegador no soporta estas propiedades.
+
+Prefijos de Proveedor
+Se incluyeron prefijos de proveedor como -webkit- y -moz- para asegurar la compatibilidad de animaciones, 
+transiciones y otras propiedades CSS en navegadores como Safari y Firefox, que pueden requerir estos prefijos 
+en versiones más antiguas.
+
+Enfoque Mobile-First
+El diseño fue desarrollado bajo un enfoque mobile-first, priorizando la adaptación a dispositivos móviles. 
+Se utilizan media queries para ajustar el layout a pantallas más grandes (tabletas y escritorios), 
+asegurando que el sitio sea completamente responsivo.
+
+Uso de Unidades Relativas
+Se emplearon unidades relativas como rem y % para tipografía, márgenes y tamaños de los elementos, 
+lo que asegura que el contenido se ajuste correctamente a diferentes tamaños de pantalla y mejore la accesibilidad.
+
+Optimización de Imágenes
+La imagen principal se ajusta automáticamente al ancho de su contenedor con width: 100% y 
+height: auto, lo que garantiza una visualización adecuada en cualquier dispositivo sin distorsión. 
+Este enfoque también ayuda a mejorar el rendimiento de carga del sitio.
+
+Compatibilidad con Navegadores Populares
+El sitio fue probado en los navegadores más populares para asegurar que el diseño y las 
+funcionalidades se mantengan consistentes. Se prestó especial atención a Safari debido a sus 
+peculiaridades con algunas propiedades CSS.
