@@ -1,0 +1,76 @@
+/* Estilo básico de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.bg-custom {
+    background-color: #004d40;
+}
+
+.btn-custom {
+    background-color: #004d40;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    background-color: #00796b;
+    color: white;
+
+}
+
+/* Sección Hero */
+#hero {
+    text-align: center;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Sección Soluciones */
+#soluciones img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Sección Clientes */
+
+#clientes .card i {
+    font-size: 5rem; 
+}
+
