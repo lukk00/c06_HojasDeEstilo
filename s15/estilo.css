@@ -1,0 +1,54 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-bg {
+    background-color: rgba(0, 77, 64, 0.92);
+    backdrop-filter: blur(6px);
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-cta {
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.12);
+}
+
+.client-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 14px 30px rgba(2, 6, 23, 0.12);
+}
+
+.client-icon {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 77, 64, 0.06), rgba(0, 0, 0, 0.02));
+}
+
+/* .order-md-last {} */
+
+.site-footer {
+    background: rgba(2, 6, 23, 0.03);
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid rgba(0, 100, 80, 0.18);
+    outline-offset: 2px;
+}

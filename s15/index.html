@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 w-full z-50">
+        <nav class="nav-bg text-white">
+            <div class="max-w-6xl mx-auto px-6 md:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-4">
+                        <a href="#inicio" class="brand text-lg md:text-xl flex items-center gap-2">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                <rect x="2" y="2" width="20" height="20" rx="6" fill="#00695c"></rect>
+                                <path d="M7 12h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path>
+                            </svg>
+                            NovaTech Pro
+                        </a>
+                    </div>
+
+                    <!-- Desktop links -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#inicio" class="hover:underline hover:opacity-95 transition">Inicio</a>
+                        <a href="#soluciones" class="hover:underline hover:opacity-95 transition">Soluciones</a>
+                        <a href="#clientes" class="hover:underline hover:opacity-95 transition">Clientes</a>
+                        <a href="#contacto"
+                            class="ml-4 inline-block bg-white text-[#004d40] px-4 py-2 rounded-md font-medium transition transform hover:-translate-y-0.5">Contactanos</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="btnMenu" aria-expanded="false" aria-controls="mobileMenu"
+                            class="p-2 rounded-md focus:outline-none">
+                            <svg id="iconOpen" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 8h16M4 16h16"></path>
+                            </svg>
+                            <svg id="iconClose" class="w-6 h-6 text-white hidden" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu content -->
+            <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#inicio" class="block py-2">Inicio</a>
+                    <a href="#soluciones" class="block py-2">Soluciones</a>
+                    <a href="#clientes" class="block py-2">Clientes</a>
+                    <a href="#contacto" class="block py-2">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN: Hero y secciones -->
+    <main id="inicio" class="pt-20"> <!-- pt-20 para compensar navbar fija -->
+        <!-- HERO -->
+        <section class="bg-gradient-to-r from-[#003c33] to-[#00695c] text-white py-20 px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Impulsamos tu empresa</h1>
+                    <p class="text-xl leading-relaxed max-w-xl">Estrategias digitales para líderes del mañana</p>
+
+                    <div class="flex items-center gap-4">
+                        <a href="#soluciones"
+                            class="hero-cta inline-block bg-white text-[#004d40] px-6 py-3 rounded-md font-semibold transition-transform duration-300 hover:scale-105">Ver
+                            soluciones</a>
+                    </div>
+
+                    <ul class="flex gap-6 text-sm opacity-90">
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg> Métodos probados</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2" />
+                            </svg> Equipo experto</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUCIONES (alternado imagen+texto) -->
+        <section id="soluciones" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto space-y-12">
+                <header class="text-center">
+                    <h2 class="text-3xl font-semibold">Nuestras Soluciones</h2>
+                    <p class="mt-3 text-lg text-gray-600">Tres áreas clave para acelerar tu negocio con tecnología
+                        eficiente y escalable.</p>
+                </header>
+
+                <!-- 1: Consultoría Estratégica (imagen izquierda) -->
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-1/2">
+                        <img src="https://media.istockphoto.com/id/1947499362/es/foto/happy-group-of-business-people-discussing-strategy-during-team-meeting-at-the-office-desk.jpg?s=612x612&w=0&k=20&c=c7Q0IkFom4FKiK1RNlDE63_oaZvoXSQyjPC0j_hzlsY="
+                            alt="Consultoría" class="w-full rounded-lg shadow-sm">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <h3 class="text-2xl font-semibold">Consultoría Estratégica</h3>
+                        <p class="text-xl leading-relaxed text-gray-700">Alineamos tecnología y negocio para priorizar
+                            iniciativas que generen retorno. Evaluación, roadmap y gobernanza para proyectos digitales.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Diagnóstico de madurez digital</li>
+                            <li>• Diseño de roadmap y métricas</li>
+                            <li>• Gestión del cambio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2: Desarrollo a Medida (imagen derecha) -->
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-1/2 md:order-last">
+                        <img src="https://media.istockphoto.com/id/1947499362/es/foto/happy-group-of-business-people-discussing-strategy-during-team-meeting-at-the-office-desk.jpg?s=612x612&w=0&k=20&c=c7Q0IkFom4FKiK1RNlDE63_oaZvoXSQyjPC0j_hzlsY="
+                            alt="Desarrollo" class="w-full rounded-lg shadow-sm">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <h3 class="text-2xl font-semibold">Desarrollo a Medida</h3>
+                        <p class="text-xl leading-relaxed text-gray-700">Construimos soluciones robustas y escalables
+                            con prácticas modernas de arquitectura y enfoque en seguridad y rendimiento.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• APIs y microservicios</li>
+                            <li>• Integraciones y automatizaciones</li>
+                            <li>• Interfaces UX limpias y accesibles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3: Crecimiento Digital (imagen izquierda) -->
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-1/2">
+                        <img src="https://media.istockphoto.com/id/1947499362/es/foto/happy-group-of-business-people-discussing-strategy-during-team-meeting-at-the-office-desk.jpg?s=612x612&w=0&k=20&c=c7Q0IkFom4FKiK1RNlDE63_oaZvoXSQyjPC0j_hzlsY="
+                            alt="Crecimiento" class="w-full rounded-lg shadow-sm">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <h3 class="text-2xl font-semibold">Crecimiento Digital</h3>
+                        <p class="text-xl leading-relaxed text-gray-700">Estrategias de adquisición y retención para
+                            escalar usuarios y ventas con datos y experimentación constante.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Embudos de conversión</li>
+                            <li>• Marketing basado en datos</li>
+                            <li>• Optimización continua</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <section id="clientes" class="py-20 px-6 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <header class="text-center mb-8">
+                    <h2 class="text-3xl font-semibold">Nuestros clientes hablan</h2>
+                    <p class="mt-2 text-gray-600">Proyectos exitosos con impacto real en pymes diversas.</p>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- cliente 1 -->
+                    <div class="client-card bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="client-icon">
+                                <!-- icono simple (SVG) -->
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2v6" stroke="#004d40" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <circle cx="12" cy="14" r="6" stroke="#004d40" stroke-width="1.6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold">Grupo Tinkuy</h3>
+                            <p class="text-sm text-gray-600">"Digitalizamos toda su operación logística en 3 meses"</p>
+                        </div>
+                    </div>
+
+                    <!-- cliente 2 -->
+                    <div class="client-card bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="client-icon">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 12h18" stroke="#004d40" stroke-width="1.6" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold">EnergyLatam</h3>
+                            <p class="text-sm text-gray-600">"Migramos sus procesos de producción a una app web
+                                escalable"</p>
+                        </div>
+                    </div>
+
+                    <!-- cliente 3 -->
+                    <div class="client-card bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="client-icon">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3v18" stroke="#004d40" stroke-width="1.6" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold">MarketVision</h3>
+                            <p class="text-sm text-gray-600">"Creamos una estrategia de marketing que duplicó sus leads"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="py-16 px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div>
+                        <h2 class="text-2xl font-semibold">Hablemos de tu proyecto</h2>
+                        <p class="mt-3 text-gray-600">Rellena el formulario y uno de nuestros especialistas te
+                            contactará para una evaluación gratuita.</p>
+                        <ul class="mt-4 space-y-2 text-gray-600">
+                            <li>• Consultoría inicial sin costo</li>
+                            <li>• Propuestas a medida</li>
+                            <li>• Planes escalables</li>
+                        </ul>
+                    </div>
+
+                    <form class="space-y-4">
+                        <input class="w-full border border-gray-200 rounded-md p-3" type="text" placeholder="Nombre"
+                            required>
+                        <input class="w-full border border-gray-200 rounded-md p-3" type="email"
+                            placeholder="Correo electrónico" required>
+                        <textarea class="w-full border border-gray-200 rounded-md p-3" rows="4"
+                            placeholder="Cuéntanos brevemente sobre tu proyecto"></textarea>
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-[#004d40] text-white px-5 py-2 rounded-md">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-600">© <strong>NovaTech Pro</strong> — Transformación digital para pymes</p>
+            <div class="flex items-center gap-4 text-gray-600">
+                <a href="#" class="text-sm hover:underline">Política de privacidad</a>
+                <a href="#" class="text-sm hover:underline">Términos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        (function () {
+            const btn = document.getElementById('btnMenu');
+            const menu = document.getElementById('mobileMenu');
+            const iconOpen = document.getElementById('iconOpen');
+            const iconClose = document.getElementById('iconClose');
+
+            btn.addEventListener('click', () => {
+                const open = menu.classList.toggle('hidden') === false;
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+
+            // Optional: close mobile menu on link click
+            document.querySelectorAll('#mobileMenu a').forEach(a => {
+                a.addEventListener('click', () => menu.classList.add('hidden'));
+            });
+        })();
+    </script>
+</body>
+
+</body>
+
+</html>
