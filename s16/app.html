@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdeaBox</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <style>
+    body {
+      background-color: #F5F5F5;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    .brand-logo {
+      font-weight: 300;
+    }
+
+    .icono-borrar {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .icono-borrar:hover {
+      color: #d32f2f !important;
+    }
+
+    .card {
+      border-radius: 10px !important;
+    }
+
+    .fixed-action-btn {
+      bottom: auto;
+      top: 80px;
+      right: 28px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo center">IdeaBox</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <div class="card hoverable">
+            <div class="card-content">
+              <span class="card-title blue-text text-darken-2">Registrar Nueva Idea</span>
+              <form id="formulario-idea">
+                <div class="input-field">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="nombre_input" type="text" class="validate">
+                  <label for="nombre_input">Nombre</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">lightbulb_outline</i>
+                  <textarea id="idea_input" class="materialize-textarea"></textarea>
+                  <label for="idea_input">Tu Idea</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h4 class="header center-align grey-text text-darken-3" style="font-weight: 300;">Ideas Recientes</h4>
+
+      <div class="row" id="contenedor-ideas">
+
+        <div class="col s12 m6">
+          <div class="card white hoverable">
+            <div class="card-content">
+              <span class="card-title grey-text text-darken-4">
+                Juan
+                <i class="material-icons right grey-text text-lighten-1 icono-borrar"
+                  onclick="borrarTarjeta(this)">delete</i>
+              </span>
+              <p>Hacer una app para gestión de reuniones</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card white hoverable">
+            <div class="card-content">
+              <span class="card-title grey-text text-darken-4">
+                Lucía
+                <i class="material-icons right grey-text text-lighten-1 icono-borrar"
+                  onclick="borrarTarjeta(this)">delete</i>
+              </span>
+              <p>Integrar IA en el chatbot del sitio</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red waves-effect waves-light" onclick="agregarIdea()">
+      <i class="large material-icons">send</i>
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+
+    // Función para AGREGAR una nueva tarjeta
+    function agregarIdea() {
+      const nombre = document.getElementById('nombre_input').value;
+      const idea = document.getElementById('idea_input').value;
+
+      // Validar que no estén vacíos
+      if (nombre === '' || idea === '') {
+        M.toast({ html: '¡Por favor completa ambos campos!' });
+        return;
+      }
+
+      // Crear el HTML de la nueva tarjeta
+      const nuevaTarjetaHTML = `
+                <div class="col s12 m6">
+                    <div class="card white hoverable animate-fade-in">
+                        <div class="card-content">
+                            <span class="card-title grey-text text-darken-4">
+                                ${nombre}
+                                <i class="material-icons right grey-text text-lighten-1 icono-borrar" onclick="borrarTarjeta(this)">delete</i>
+                            </span>
+                            <p>${idea}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+      // Insertar la tarjeta en el contenedor
+      const contenedor = document.getElementById('contenedor-ideas');
+      // 'beforeend' agrega el elemento al final de la lista
+      contenedor.insertAdjacentHTML('beforeend', nuevaTarjetaHTML);
+
+      // Limpiar los campos del formulario
+      document.getElementById('nombre_input').value = '';
+      document.getElementById('idea_input').value = '';
+      M.textareaAutoResize(document.getElementById('idea_input')); // Resetea tamaño textarea
+
+      // Feedback visual
+      M.toast({ html: 'Idea registrada con éxito' });
+    }
+
+    // Función para BORRAR la tarjeta
+    function borrarTarjeta(elementoIcono) {
+      if (confirm('¿Seguro que quieres borrar esta idea?')) {
+        const columnaTarjeta = elementoIcono.closest('.col');
+        columnaTarjeta.remove();
+        M.toast({ html: 'Idea eliminada' });
+      }
+    }
+  </script>
+</body>
+
+</html>
