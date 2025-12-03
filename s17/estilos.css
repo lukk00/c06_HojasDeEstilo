@@ -1,0 +1,115 @@
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #F5F5F5;
+    /* Fondo Gris Claro [cite: 284] */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+.card-title,
+.brand-logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    font-size: 32px !important;
+    font-weight: 700;
+}
+
+.eco-green {
+    background-color: #43A047 !important;
+}
+
+.eco-text {
+    color: #43A047 !important;
+}
+
+/* AJUSTES DE COMPONENTES */
+.input-field input[type=text]:focus+label,
+.input-field input[type=email]:focus+label {
+    color: #43A047 !important;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #43A047 !important;
+    box-shadow: 0 1px 0 0 #43A047 !important;
+}
+
+.input-field .prefix.active {
+    color: #43A047;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ESTILOS DEL CARRUSEL */
+
+.carousel-slider {
+    height: 500px !important;
+}
+
+.carousel-img-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Capa oscura (Overlay) para mejorar la lectura del texto */
+.bg-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+
+.carousel-content-wrapper h2 {
+    font-size: 4.5rem !important;
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.carousel-content-wrapper p {
+    font-size: 1.8rem !important;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel-content-wrapper h2 {
+        font-size: 2.5rem !important; /* En celular se reduce a un tamaño seguro */
+    }
+    .carousel-content-wrapper p {
+        font-size: 1.2rem !important;
+    }
+}

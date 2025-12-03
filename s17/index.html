@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFuture - Tecnología Sostenible</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="eco-green">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo font-montserrat">EcoFuture</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#mision">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="carousel carousel-slider center" id="inicio">
+
+        <div class="carousel-item white-text" href="#one!">
+            <div class="carousel-img-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="bg-overlay"></div>
+            </div>
+            <div class="carousel-content-wrapper">
+                <h2 class="font-montserrat">Bienvenido a EcoFuture</h2>
+                <p class="white-text flow-text">Tecnología al servicio de la naturaleza</p>
+                <a href="#mision" class="btn waves-effect white grey-text text-darken-3 font-montserrat">Conócenos</a>
+            </div>
+        </div>
+
+        <div class="carousel-item white-text" href="#two!">
+            <div class="carousel-img-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="bg-overlay"></div>
+            </div>
+            <div class="carousel-content-wrapper">
+                <h2 class="font-montserrat">Energía Limpia</h2>
+                <p class="white-text flow-text">Innovando para un futuro sostenible</p>
+            </div>
+        </div>
+
+        <div class="carousel-item white-text" href="#three!">
+            <div class="carousel-img-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="bg-overlay"></div>
+            </div>
+            <div class="carousel-content-wrapper">
+                <h2 class="font-montserrat">Únete al Cambio</h2>
+                <p class="white-text flow-text">Sé parte de la revolución verde</p>
+            </div>
+        </div>
+
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#mision">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <main>
+        <div class="container section" id="mision">
+            <h4 class="center-align font-montserrat eco-text">Conoce Nuestro Propósito</h4>
+            <div class="row">
+                <div class="col s12 m10 offset-m1">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80">
+                            <span class="card-title font-montserrat">Nuestra Misión</span>
+                        </div>
+                        <div class="card-content">
+                            <p>En EcoFuture, conectamos la innovación tecnológica con la sostenibilidad ambiental.
+                                Buscamos inspirar a las nuevas generaciones para desarrollar soluciones que protejan
+                                nuestro planeta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section" id="contacto">
+            <h4 class="center-align font-montserrat eco-text">Únete al Cambio</h4>
+            <div class="row">
+                <form class="col s12 m8 offset-m2 card-panel z-depth-2" style="padding: 30px;">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Nombre completo</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="icon_email" type="email" class="validate">
+                            <label for="icon_email">Correo electrónico</label>
+                        </div>
+                    </div>
+
+                    <div class="center-align" style="margin-top: 20px; position: relative; height: 50px;">
+                        <a class="btn-floating btn-large waves-effect waves-light eco-green modal-trigger"
+                            href="#modal-gracias">
+                            <i class="material-icons">send</i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal-gracias" class="modal">
+        <div class="modal-content center-align">
+            <h4 class="font-montserrat eco-text">¡Gracias por suscribirte!</h4>
+            <p>Bienvenido a la comunidad de EcoFuture. Pronto recibirás noticias verdes.</p>
+            <i class="material-icons large eco-text">eco</i>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+    </div>
+
+    <footer class="page-footer eco-green">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text font-montserrat">EcoFuture</h5>
+                    <p class="grey-text text-lighten-4">Innovación para un mundo sostenible.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text font-montserrat">Síguenos</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!"><i
+                                    class="material-icons tiny left">thumb_up</i> Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!"><i
+                                    class="material-icons tiny left">camera_alt</i> Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!"><i
+                                    class="material-icons tiny left">alternate_email</i> Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2024 EcoFuture - Derechos Reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar componentes generales
+            M.AutoInit();
+
+            // Inicializar Carrusel con opciones específicas
+            var elemsCarousel = document.querySelectorAll('.carousel');
+            var instancesCarousel = M.Carousel.init(elemsCarousel, {
+                fullWidth: true,    // Ocupar todo el ancho
+                indicators: true,   // Mostrar puntitos abajo
+                duration: 200       // Velocidad de transición
+            });
+
+            // Hacer que el carrusel se mueva solo cada 5 segundos
+            setInterval(function () {
+                var instance = M.Carousel.getInstance(elemsCarousel[0]);
+                instance.next();
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
